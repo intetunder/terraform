@@ -1,3 +1,9 @@
+  resource "aws_elb" "web" {
+    # ... other
+    
+    instances = ["${aws_instance.web.*.id}"]
+  }
+
   resource "aws_instace" "web" {
     count         = "4"
     ami           = "ami-91562df2"
