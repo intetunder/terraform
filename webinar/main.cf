@@ -1,0 +1,5 @@
+  resource "aws_instace" "web" {
+    count         = "4"
+    ami           = "ami-91562df2"
+    instance_type = "t2.micro"
+  }
